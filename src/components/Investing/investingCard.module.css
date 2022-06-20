@@ -1,0 +1,33 @@
+.investingCard{
+  position: relative;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.investingCardDetail{
+  position: absolute;
+  top: 0;
+  background-color: #18181890;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  padding: 20px;
+  opacity: 0;
+  transition: all 1s ease;
+  display: flex;
+  align-items: flex-end;
+}
+.investingCard img{
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transition: all 0.9s ease;
+}
+.investingCard:hover img {
+  transform: scale(1.3);
+}
+
+.investingCard:hover .investingCardDetail{
+  opacity: 1;
+  /* display: none; */
+}

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "italicFont";
+  src: url("../../fonts/PlayfairDisplay-SemiBoldItalic.ttf");
+}
+@font-face {
+  font-family: "boldFont";
+  src: url("../../fonts/LibreBaskerville-Bold.ttf");
+}
+.landingSection{
+  min-height: 100vh;
+  background-image: url("../../images/img1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+.landingSection::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.479);
+  z-index: 2;
+}
+.landingSection div{
+  z-index: 3;
+}
+.headerH1{
+  color:#fff; 
+  font-family: "italicFont";
+}
+.headerP{
+  font-size: 1.5em;
+  color:#fff; 
+  font-family: "boldFont";
+}

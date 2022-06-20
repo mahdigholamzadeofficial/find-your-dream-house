@@ -1,0 +1,16 @@
+.footerContainer{
+  padding:50px 0 20px 0;
+}
+.footerContainer ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footerContainer ul li a{
+  color: #6c757d;
+  text-decoration: none;
+}
+.footerContainer h4{
+  border-left: 2px solid #181818;
+  padding-left: 10px;
+}

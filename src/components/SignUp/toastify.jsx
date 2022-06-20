@@ -1,0 +1,10 @@
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
+const notify=(text,type)=>{
+  if(type=="success"){
+    toast.success(text)
+  }else{
+    toast.error(text)
+  }
+}
+export default notify;

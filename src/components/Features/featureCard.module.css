@@ -1,0 +1,26 @@
+.featureCard{
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px #000;
+  padding: 18px;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+.featureCard:hover{
+  box-shadow: none;
+  transform: translate(4px,4px);
+}
+.featuresCardIcon{
+  background-color: #000;
+  border-radius: 50%;
+  padding: 8px;
+  margin: 10px 0;
+  display: inline-block;
+}
+.featuresCardIcon span{
+  color: #fff;
+  font-size: 1.5em;
+}
+.featureCard p{
+  font-size: 1em;
+}

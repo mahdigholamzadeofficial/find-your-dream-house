@@ -1,0 +1,61 @@
+.pricingCard{
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.pricingCard::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  background-color: #181818de;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.pricingCard:hover::after{
+  opacity: 1;
+  left: 0;
+}
+.priceBorder{
+  border-top: 1px solid #000;
+  border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+}
+
+.pricingCard h5,
+.pricingCard h4{
+  padding: 7px 0;
+  transition: all 0.8s ease;
+}
+
+.pricingCard ul{
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+.pricingCard ul li{
+  padding:10px 0;
+  font-size: 1.1em;
+  transition: all 0.5s ease;
+
+}
+.pricingCard ul li span{
+  margin: 0 5px 0 0 ;
+  transition: all 0.5s ease;
+
+}
+.pricingCard:hover{
+  color: #fff;
+}
+
+.pricingCard:hover span{
+  border-color: #eee;
+}

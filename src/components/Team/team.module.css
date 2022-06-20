@@ -1,0 +1,5 @@
+.teamSection{
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #d7dde8, #757f9a);
+  padding: 60px 0;
+}
