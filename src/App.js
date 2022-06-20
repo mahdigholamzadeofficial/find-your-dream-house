@@ -11,8 +11,8 @@ import Features from './components/Features/Features';
 import Countries from './components/Countries/countries';
 import Footer from './components/Footer/footer';
 import Landing from './components/Landing/landing';
-import SignUp from './components/SignUp/SignUp';
-import Login from './components/SignUp/Login';
+import SignUp from './components/Forms/SignUp';
+import Login from './components/Forms/Login';
 
  const App =()=> {
   return (

@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import styles from "./form.module.css"
-
+import notify from './toastify';
+import { ToastContainer } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import validate from './validate';
 const Login=()=> {
@@ -8,19 +9,13 @@ const Login=()=> {
   const [errors,setErrors] = useState({});
 
   const [state ,setState] = useState({
-    name:"",
     email:"",
     password:"",
-    confirmPassword:"",
-    privacyCheckbox:false,
   })
 
   const [touched,setTouched] = useState({
-    name:false,
     email:false,
     password:false,
-    confirmPassword:false,
-    privacyCheckbox:false,
   })
 
   //////////////////////////////////////////////////////////useEffects
@@ -34,12 +29,7 @@ const Login=()=> {
   //////////////////////////////////////////////////////////changeHandler
 
   const inputChangeHandler=(e)=>{
-    if(e.target.name!== "privacyCheckbox"){
-      setState({...state,[e.target.name]:e.target.value});
-    }
-    else{
-      setState({...state,[e.target.name]:e.target.checked})
-    }
+    setState({...state,[e.target.name]:e.target.value});
   }
 
   //////////////////////////////////////////////////////////focusHandler
@@ -55,13 +45,16 @@ const Login=()=> {
 
   const submitHandler=(e)=>{
     e.preventDefault();
-    setTouched({
-      name:true,
-      email:true,
-      password:true,
-      confirmPassword:true,
-      privacyCheckbox:true,
-    })
+    if(!Object.keys(errors).length){
+      notify("You loged in successfully!","success")
+    }else{
+      setTouched({
+        email:true,
+        password:true,
+      })
+      notify("Invalid data!","error")
+
+    }
   }
   return (
     <section className={styles.formContainer}>
@@ -103,6 +96,7 @@ const Login=()=> {
           </div>
         </form>
       </div>
+      <ToastContainer/>
     </section>
   )
 }
