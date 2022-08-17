@@ -13,7 +13,7 @@ import Footer from './components/Footer/footer';
 import Landing from './components/Landing/landing';
 import SignUp from './components/Forms/SignUp';
 import Login from './components/Forms/Login';
-import ScrollToTop from './helpers/ScrollToTop';
+import ScrollToTop from './components/helpers/ScrollToTop';
  const App =()=> {
   return (
     <>

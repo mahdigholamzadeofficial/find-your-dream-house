@@ -3,7 +3,7 @@ import styles from "./TeamCard.module.css"
 import {BsInstagram,BsFacebook, BsTwitter} from "react-icons/bs"
 const TeamCard=({image,career,name})=> {
   return (
-    <div className='col-md-3 d-flex justify-content-center'>
+    <div className='col-sm-6 col-md-5 col-lg-3 d-flex justify-content-center'>
       <div className={styles.teamCard}>
         <img src={image} alt="person images" />
         <h6>{name}</h6>
